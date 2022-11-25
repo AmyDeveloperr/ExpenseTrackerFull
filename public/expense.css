@@ -238,9 +238,9 @@ body.dark{
     cursor: pointer;
   }
 
-  /* #listOfExpenses {
+  #listOfExpenses {
+    position: absolute;
     color: yellow;
-    position: fixed;
-    left: 75%;
-    bottom:60%;
-  } */
+    left: 10%;
+    bottom:35%;
+  }

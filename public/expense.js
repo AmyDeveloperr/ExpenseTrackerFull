@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', async(event) =>{
 
 
     let response = await axios.post(`http://35.77.84.60:5000/user/getExpenses/${page}`,{Items_Per_Page: Items_Per_Page}, {headers: {"Authorization": token}})
-
+    
     checkIfPremiumUser();
 
     if(response.status === 200 ){
@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', async(event) =>{
     function checkIfPremiumUser(){
         let userType = localStorage.getItem('user');
 
-        if(userType == "true"){
+        if(userType === "true"){
             premiumUser();
             reportDown();
             getPremiumLeaderboard();

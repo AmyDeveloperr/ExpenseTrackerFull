@@ -1,6 +1,7 @@
 const path = require('path');
 const fs =require('fs');
 const bcrypt = require('bcrypt');
+const cors = require('cors');
 
 const dotenv = require('dotenv')
 //const razorpay = require('razorpay');
@@ -18,7 +19,6 @@ const Forgotpassword = require('./models/forgotPassword');
 const DownloadUrl = require('./models/downloadUrls');
 
 
-const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
 const morgan = require('morgan');  //morgan is a Node. js and Express middleware to log HTTP requests and errors, and simplifies the process

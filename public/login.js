@@ -17,6 +17,7 @@ function logIn(event) {
       localStorage.setItem('token', response.data.token);
       if(response.status === 200)
       {
+           localStorage.setItem('user', false);
            window.location.href = "./expense.html"
            redirect('./expense.html')
       }
