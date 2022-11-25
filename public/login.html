@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+    <body>
+        <div class="center">
+            <h1>Log In</h1>
+
+            <form onsubmit="logIn(event)" method="POST">
+
+                <div class="txt_field">
+                    <input type="email" name="emailId"  required/>            
+                    <span></span>
+                    <label> EmailId</label>
+                </div>
+
+                <div class="txt_field">
+                    <input type="password" name="password" required/>
+                    <span></span>
+                    <label> Password</label>
+                      
+                </div>
+                <div class="pass" ><a href="../public/forgot.html"> Forgot Password?</a></div>
+                
+                <button class="newlogin" id="submit"> Login </button>
+
+                <div class="login_link">
+                    New member? <a href="../public/signup.html">Signup</a>
+                  </div>
+                
+            </form>
+
+            <div id="existing"></div>
+        
+            <ul id='listOfUsers'></ul>
+           
+        </div>
+        
+        <script src="../public/login.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js" ></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js" integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--request the server for the code for network calls-->
+    </body>
+</html>

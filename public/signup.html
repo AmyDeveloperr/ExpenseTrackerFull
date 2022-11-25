@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+    <body>
+        <div class="center">
+            <h1>Sign Up</h1>
+            <form onsubmit="signUp(event)" method="POST" id="signup-form">
+                <div class="txt_field">
+                    
+                    <input type="text" name="username"  required/>
+                    <span></span>
+                    <label> Name</label>
+                </div>
+
+                <div class="txt_field">
+                    
+                    <input type="email" name="emailId"  required/>
+                    <span></span>
+                    <label> EmailId</label>
+                </div>
+                    
+                <div class="txt_field">
+                    <input type="password" name="password"/>
+                    <span></span>
+                   
+                    <label> Password</label>
+                </div>
+               
+                <button id="submit"> signup </button>
+
+                <div class="login_link">
+                    Already a member? <a href="../public/login.html">Exisitng User Login</a>
+
+                </div>
+                
+            </form>
+           
+            
+            <div id="existing"></div>
+            
+            <ul id='listOfUsers'></ul>
+
+        </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js" integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../public/signup.js"></script>
+
+        <!--request the server for the code for network calls-->
+
+    </body>
+</html>
