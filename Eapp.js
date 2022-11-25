@@ -5,12 +5,6 @@ const bcrypt = require('bcrypt');
 const dotenv = require('dotenv')
 //const razorpay = require('razorpay');
 
-
-
-
-
-
-
 const express = require('express'); //importing express module
 const bodyParser = require('body-parser');
 
@@ -35,7 +29,9 @@ const app = express();  // using func of express to handling things for us or sh
 dotenv.config();
 
 
-app.use(helmet());
+app.use(helmet({
+    contentSecurityPolicy: false
+}));
 app.use(compression());
 app.use(morgan('combined', {stream: accessLogStream}));
 app.use(cors());
@@ -70,6 +66,9 @@ app.use('/expense',expenseRoutes)
 
 app.use('/pass', forgotRoutes)
 
+app.use((req, res, next)=> {
+    res.sendFile(path.join(__dirname, `public/${req.url}`))
+})
 
 User.hasMany(Expense);
 Expense.belongsTo(User);
