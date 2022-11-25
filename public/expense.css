@@ -226,8 +226,8 @@ body.dark{
 
   #logout {
     position: absolute;
-    left: 78%;
-    bottom: 91%;
+    top: 20px;
+    right:250px;
     border-radius: 25%;
     padding: 6px;
     background-color: #8e44ad;
